@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Review Email System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/css/application.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mb-5 mt-5">Reviews</h1>
+      <% @reviews.each do |review| %>
+        <h2><%= review[:subject] %></h2>
+        <p><%= review[:body] %></p>
+        <hr class="mb-5" />
+      <% end %>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
